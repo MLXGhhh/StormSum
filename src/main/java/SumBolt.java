@@ -34,8 +34,8 @@ public class SumBolt extends BaseRichBolt {
     public void execute(Tuple input) {
         Long orderCost = input.getLongByField("order_cost");
         sumOrderCost += orderCost;
-        System.out.println("商城网站到目前" + new SimpleDateFormat("yyyy—MM-dd HH:mm:ss").format(new Date())  + "的商品总交易额" + sumOrderCost);
-        Utils.sleep(1000);
+        System.out.println("商城网站到目前" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())  + "的商品总交易额" + sumOrderCost);
+        Utils.sleep(2000);
     }
 
     /**

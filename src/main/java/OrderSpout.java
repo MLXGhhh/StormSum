@@ -33,7 +33,7 @@ public class OrderSpout extends BaseRichSpout {
         long num = 0;
         while (true) {
             num++;
-            Utils.sleep(1000);
+            Utils.sleep(2000);
             System.out.println("当前时间" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()) + "产生的订单金额：" + num);
             this.collector.emit(new Values(num));
         }
